@@ -10,20 +10,25 @@
   <title>Frontend Mentor | Product preview card component</title>
 
 </head>
-<body>
-
-  Preview
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
+<body class="body row">
+  <main class="container">
+    <picture class="product-image">
+      <source media="(min-width:600px)" srcset="images/image-product-desktop.jpg">
+      <img src="images/image-product-mobile.jpg" alt="CHANEL perfume bottle laying on its back with leaves above and below it." class="product-image__img">
+    </picture>
+    <section class="product">
+      <p class="product__category">perfume</p>
+      <h1 class="product__title">Gabrielle Essence Eau De Parfum</h1>
+      <p class="product__description">
+        A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+      </p>
+      <div>
+        <p class="product__price">$149.99</p>
+        <p class="product__original-price">$169.99</p>
+      </div>
+      <button class="product__purchase-btn">Add to Cart</button>
+    </section>
+  </main>
   <footer class="footer">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">mhu29</a>.

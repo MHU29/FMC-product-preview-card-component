@@ -87,10 +87,38 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/* Utils */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* general */
+
+.body {
+  background: var(--cls-primary-200);
+}
+
+.container {
+  max-width: 90%;
+}
+
+.product{
+    background: var(--cls-secondary-100);
+}
+
+.product-image{
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    overflow: hidden;
+}
 
 /* footer */
 .footer {
+    display: none;
+  position: absolute;
+  bottom: 0;
   font-size: 11px;
   text-align: center;
 }
