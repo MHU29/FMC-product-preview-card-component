@@ -13,8 +13,8 @@
   --ff-base: "Montserrat", sans-serif;
   --ff-title: "Fraunces", serif;
 
-  --fs-sm: .75rem; /*10px*/
-  --fs-md: .875rem; /*14px*/
+  --fs-sm: 0.75rem; /*10px*/
+  --fs-md: 0.875rem; /*14px*/
   --fs-lg: 1.5rem; /*24px*/
 
   --fw-regular: 500;
@@ -108,17 +108,17 @@ h6 {
   max-width: 450px;
 }
 
-.product {
-  background: var(--cls-secondary-100);
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
-  padding: 25px;
-}
-
 .product-image {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   overflow: hidden;
+}
+
+.product {
+  background: var(--cls-secondary-100);
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  padding: 1.5rem;
 }
 
 .product__category {
@@ -127,106 +127,94 @@ h6 {
   letter-spacing: 0.5em;
 }
 
-.product__title{
+.product__title {
   font-family: var(--ff-title);
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
   color: var(--cls-secondary-800);
   line-height: 1em;
-  padding: 20px 0 24px;
+  padding: 0.8333333333333333em 0 1em;
 }
 
-.product__price--flex{
+.product__price--flex {
   display: flex;
   gap: 2em;
-  padding-bottom: 18px;
+  padding-bottom: 1.285714285714286em;
   align-items: center;
 }
 
-.product__description{
-  padding-bottom: 24px;
+.product__description {
+  padding-bottom: 1.714285714285714em;
 }
 
-.product__discount-price{
+.product__discount-price {
   font-family: var(--ff-title);
   font-size: var(--fs-lg);
   color: var(--cls-primary-500);
 }
 
-.product__original-price{
+.product__original-price {
   font-size: var(--fs-sm);
   text-decoration: line-through;
 }
 
-.product__purchase-btn{
-  height:48px;
+.product__purchase-btn {
+  content: url(../images/icon-cart.svg);
   width: 100%;
   background: var(--cls-primary-500);
   color: var(--cls-secondary-100);
+  font-size: 1rem;
   font-weight: var(--fw-bold);
   border: 0;
   border-radius: 1em;
+  padding: 0.8em;
 }
 
-.product__purchase-btn::before{
+.product__purchase-btn::before {
+  display: inline;
   content: url(../images/icon-cart.svg);
-  padding: 1em;
-  text-align: center;
+  padding-right: 0.5em;
 }
 
-/* footer */
-.footer {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  font-size: 11px;
-  text-align: center;
+.product__purchase-btn:focus,
+.product__purchase-btn:hover {
+  background: hsl(156, 42%, 18%);
+  cursor: grab;
 }
 
-.footer a {
-  color: hsl(228, 45%, 44%);
-}
-
-
-@media (min-width:650px){
-  .container{
+@media (min-width: 650px) {
+  .container {
     display: flex;
     max-width: 600px;
   }
 
-  .product__title{
-    padding: 26px 0 32px;
-    width: 75%;
-  }
-
-  .product__description{
-    padding-bottom: 32px;
+  .product-image {
+    border-bottom-left-radius: 1em;
+    border-top-right-radius: 0;
+    width: 50%;
   }
 
   .product {
     border-top-right-radius: 1em;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 1em;
-    padding: 32px;
+    padding: 2.285714285714286em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  .product-image{
-
-    border-bottom-left-radius: 1em;
-    border-top-right-radius: 0;
-    width: 50%;
-  }
-  .product{
     width: 50%;
   }
 
-
-  .product__price--flex{
-    padding-bottom: 24px;
+  .product__title {
+    padding: 1em 0 1.333333333333333em;
+    width: 75%;
   }
 
+  .product__description {
+    padding-bottom: 2.285714285714286em;
+  }
 
+  .product__price--flex {
+    padding-bottom: 1.714285714285714em;
+  }
 }
